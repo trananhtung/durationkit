@@ -4,8 +4,8 @@
 
 Bidirectional duration parsing and formatting. Parse `"2h 30m"`, `"1.5 hours"`, `"2:30:00"`, ISO 8601. Format ms to compact/long/colon/ISO. Zero dependencies, TypeScript.
 
-[![npm](https://img.shields.io/npm/v/durationkit)](https://www.npmjs.com/package/durationkit)
-[![npm downloads](https://img.shields.io/npm/dw/durationkit)](https://www.npmjs.com/package/durationkit)
+[![npm](https://img.shields.io/npm/v/@billdaddy/durationkit)](https://www.npmjs.com/package/@billdaddy/durationkit)
+[![npm downloads](https://img.shields.io/npm/dw/@billdaddy/durationkit)](https://www.npmjs.com/package/@billdaddy/durationkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Why durationkit?
@@ -22,13 +22,13 @@ Inspired by Python's `pytimeparse`, Go's `time.ParseDuration`, Ruby's `ChronicDu
 ## Install
 
 ```bash
-npm install durationkit
+npm install @billdaddy/durationkit
 ```
 
 ## Quick start
 
 ```ts
-import { parseDuration, formatDuration } from "durationkit";
+import { parseDuration, formatDuration } from "@billdaddy/durationkit";
 
 // Parse → milliseconds
 parseDuration("2h 30m")          // 9_000_000
@@ -97,7 +97,7 @@ parseDuration("P1W")               // 1 week
 ### Safe parsing
 
 ```ts
-import { tryParseDuration } from "durationkit";
+import { tryParseDuration } from "@billdaddy/durationkit";
 
 tryParseDuration("2h 30m")     // 9_000_000
 tryParseDuration("invalid")    // null  (no throw)
@@ -152,7 +152,7 @@ formatDuration(90_061_000, {style:"long", maxParts:2}) // "1 day 1 hour"
 ## Constants
 
 ```ts
-import { MS_PER } from "durationkit";
+import { MS_PER } from "@billdaddy/durationkit";
 
 MS_PER.second      // 1_000
 MS_PER.minute      // 60_000
@@ -166,7 +166,7 @@ MS_PER.year        // 31_557_600_000 (365.25 days)
 ## Error handling
 
 ```ts
-import { DurationParseError } from "durationkit";
+import { DurationParseError } from "@billdaddy/durationkit";
 
 try {
   parseDuration("not-a-duration");
